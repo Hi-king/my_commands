@@ -1,0 +1,26 @@
+==================
+ My tiny commands
+==================
+
+
+========================================================
+hiking_plot_simple.bash
+--------------------------------------------------------
+simple gnuplot helper
+--------------------------------------------------------
+arguments
+    |- filename.csv | filename.dat
+        |- should be 1-dim or comma sepalated multi-dim
+--------------------------------------------------------
+options
+    |-  -l: with lines
+    |-  -s: output to epsfile
+    |-  -d $s...$e
+        |- $s : start dimention
+        |- $e : end dimention
+--------------------------------------------------------
+output
+    |- plot in X-window
+    |- if(-s)
+        |- $filename_D${s}toD${e}.eps    
+========================================================
