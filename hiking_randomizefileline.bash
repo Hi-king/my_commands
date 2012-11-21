@@ -1,13 +1,16 @@
 #!/bin/bash
 Document='
-============================
+===============================================
 Randomize lines (Speedup)
-----------------------------
+-----------------------------------------------
 arguments
     |- $filename
 output
-    |- randomized lines
-============================
+    |- randomized lines to STDOUT
+===============================================
+Algorithm is based on following web
+[[http://ray.sakura.ne.jp/tips/shaffle.html]]
+===============================================
 '
 
 # --- arguments ---
