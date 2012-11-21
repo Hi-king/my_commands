@@ -23,7 +23,7 @@ fi
 
 filename=$1
 
-a=($(less $filename|sed "s/\r\n/\n/g"|sed "s/\r/\n/"))
+a=($(less $filename|tr "\r" "\n"))
 for i in $(seq 1 $((${#a[@]}-1)));do 
     randi=$(($RANDOM%$i));
     tmp=${a[$i]};
