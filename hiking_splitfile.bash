@@ -20,7 +20,7 @@ filename=$1
 base=${filename%.*}
 base=${base}_split
 ext=.${filename##*.}
-splitnum=2;if [ $# -gt 2 ];then splitnum=$2;fi
+splitnum=2;if [ $# -ge 2 ];then splitnum=$2;fi
 
 # --- main --- #
 linenum=`less $filename|wc -l`
