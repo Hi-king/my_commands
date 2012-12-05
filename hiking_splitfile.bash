@@ -28,9 +28,9 @@ outlinenum=$(($linenum/$splitnum))
 
 splitnum=$(($splitnum-1))
 less $filename|tail -n +$(($outlinenum*$splitnum)) > ${base}$((splitnum+1))$ext
-echo "less $filename|tail -n +$(($outlinenum*$splitnum))"
+echo "less $filename|tail -n +$(($outlinenum*$splitnum+1))"
 while [ $splitnum -gt 0 ];do
     splitnum=$(($splitnum-1))
     less $filename|tail -n +$(($outlinenum*$splitnum))|head -$outlinenum > ${base}$(($splitnum+1))$ext
-    echo "less $filename|tail -n +$(($outlinenum*$splitnum))|head -$outlinenum"
+    echo "less $filename|tail -n +$(($outlinenum*$splitnum+1))|head -$outlinenum"
 done
